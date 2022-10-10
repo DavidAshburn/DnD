@@ -1,0 +1,302 @@
+this.getField("STRstat").value
+
+var stStyle = this.getField("StatRolls").value;
+
+if(stStyle == "Random" || stStyle == "Recommended")  {
+  this.getField("STRstat").value = this.getField("STR").value;
+  this.getField("DEXstat").value = this.getField("DEX").value;
+  this.getField("CONstat").value = this.getField("CON").value;
+  this.getField("INTstat").value = this.getField("INT").value;
+  this.getField("WISstat").value = this.getField("WIS").value;
+  this.getField("CHAstat").value = this.getField("CHA").value;
+} else {
+  this.getField("STRstat").value = this.getField("KnowStrength").value;
+  this.getField("DEXstat").value = this.getField("KnowDexterity").value;
+  this.getField("CONstat").value = this.getField("KnowConstitution").value;
+  this.getField("INTstat").value = this.getField("KnowIntelligence").value;
+  this.getField("WISstat").value = this.getField("KnowWisdom").value;
+  this.getField("CHAstat").value = this.getField("KnowCharisma").value;
+}
+
+
+var a1 = this.getField("A1").value;
+var a2 = this.getField("A2").value;
+var a3 = this.getField("A3").value;
+var a4 = this.getField("A4").value;
+var a5 = this.getField("A5").value;
+var a6 = this.getField("A6").value;
+var a7 = this.getField("A7").value;
+var a8 = this.getField("A8").value;
+var a9 = this.getField("A9").value;
+
+
+var pClass = this.getField("Class").value;
+switch( pClass )  {
+
+case "Barbarian":
+    this.getField("AnimalHandling").value = a1;
+    this.getField("Athletics").value = a2;
+    this.getField("Intimidation").value = a3;
+    this.getField("Nature").value = a4;
+    this.getField("Perception").value = a5;
+    this.getField("Survival").value = a6;
+    this.getField("StrSave").checkThisBox(0,true);
+    this.getField("ConSave").checkThisBox(0,true);
+    this.getField("HitDie").value = "d12";
+    break;
+
+case "Bard":
+this.getField("Acrobatics").value = a1;
+this.getField("Athletics").value = a2;
+this.getField("Deception").value = a3;
+this.getField("History").value = a4;
+this.getField("Insight").value = a5;
+this.getField("Investigation").value = a6;
+this.getField("Performance").value = a8;
+this.getField("Perception").value = a7;
+this.getField("Persuasion").value = a9;
+this.getField("DexSave").checkThisBox(0,true);
+this.getField("ChaSave").checkThisBox(0,true);
+this.getField("HitDie").value = "d8";
+this.getField("SpellCHA").checkThisBox(0,true);
+this.getField("SpellStat").value = "CHA";
+this.getField("Level1SpellSlots").value = 3;
+    break;
+
+case "Cleric":
+this.getField("History").value = a1;
+this.getField("Insight").value = a2;
+this.getField("Medicine").value = a3;
+this.getField("Nature").value = a4;
+this.getField("Perception").value = a5;
+this.getField("Persuasion").value = a6;
+this.getField("Religion").value = a7;
+this.getField("WisSave").checkThisBox(0,true);
+this.getField("ChaSave").checkThisBox(0,true);
+this.getField("HitDie").value = "d8";
+this.getField("SpellWIS").checkThisBox(0,true);
+this.getField("SpellStat").value = "WIS";
+this.getField("Level1SpellSlots").value = 3;
+    break;
+
+
+case "Druid":
+this.getField("AnimalHandling").value = a1;
+this.getField("Arcana").value = a2;
+this.getField("Insight").value = a3;
+this.getField("Medicine").value = a4;
+this.getField("Nature").value = a5;
+this.getField("Perception").value = a6;
+this.getField("Religion").value = a7;
+this.getField("Survival").value = a8;
+this.getField("IntSave").checkThisBox(0,true);
+this.getField("WisSave").checkThisBox(0,true);
+this.getField("HitDie").value = "d8";
+this.getField("SpellWIS").checkThisBox(0,true);
+this.getField("SpellStat").value = "WIS";
+this.getField("Level1SpellSlots").value = 3;
+    break;
+
+case "Fighter":
+this.getField("Acrobatics").value = a1;
+this.getField("AnimalHandling").value = a2;
+this.getField("Arcana").value = a3;
+this.getField("History").value = a4;
+this.getField("Insight").value = a5;
+this.getField("Intimidation").value = a6;
+this.getField("Perception").value = a7;
+this.getField("Survival").value = a8;
+this.getField("StrSave").checkThisBox(0,true);
+this.getField("ConSave").checkThisBox(0,true);
+this.getField("HitDie").value = "d10";
+    break;
+
+case "Monk":
+this.getField("Acrobatics").value = a1;
+this.getField("Athletics").value = a2;
+this.getField("History").value = a3;
+this.getField("Insight").value = a4;
+this.getField("Religion").value = a5;
+this.getField("Stealth").value = a6;
+this.getField("StrSave").checkThisBox(0,true);
+this.getField("ChaSave").checkThisBox(0,true);
+this.getField("HitDie").value = "d8";
+this.getField("SpellWIS").checkThisBox(0,true);
+this.getField("SpellStat").value = "WIS";
+
+    break;
+
+case "Paladin":
+this.getField("Athletics").value = a1;
+this.getField("Insight").value = a2;
+this.getField("Intimidation").value = a3;
+this.getField("Medicine").value = a4;
+this.getField("Persuasion").value = a5;
+this.getField("Religion").value = a6;
+this.getField("ChaSave").checkThisBox(0,true);
+this.getField("WisSave").checkThisBox(0,true);
+this.getField("HitDie").value = "d10";
+this.getField("SpellCHA").checkThisBox(0,true);
+this.getField("SpellStat").value = "CHA";
+this.getField("Level1SpellSlots").value = 2;
+    break;
+
+case "Ranger":
+this.getField("AnimalHandling").value = a1;
+this.getField("Athletics").value = a2;
+this.getField("Insight").value = a3;
+this.getField("Investigation").value = a4;
+this.getField("Nature").value = a5;
+this.getField("Perception").value = a6;
+this.getField("Stealth").value = a7;
+this.getField("Survival").value = a8;
+this.getField("StrSave").checkThisBox(0,true);
+this.getField("DexSave").checkThisBox(0,true);
+this.getField("HitDie").value = "d10";
+this.getField("SpellWIS").checkThisBox(0,true);
+this.getField("SpellStat").value = "WIS";
+this.getField("Level1SpellSlots").value = 2;
+    break;
+
+case "Rogue":
+this.getField("Acrobatics").value = a1;
+this.getField("Athletics").value = a2;
+this.getField("Deception").value = a3;
+this.getField("Insight").value = a4;
+this.getField("Investigation").value = a5;
+this.getField("Perception").value = a6;
+this.getField("Persuasion").value = a7;
+this.getField("SleightofHand").value = a8;
+this.getField("Stealth").value = a9;
+this.getField("IntSave").checkThisBox(0,true);
+this.getField("DexSave").checkThisBox(0,true);
+this.getField("HitDie").value = "d8";
+    break;
+
+case "Sorceror":
+this.getField("Arcana").value = a1;
+this.getField("Deception").value = a2;
+this.getField("Insight").value = a3;
+this.getField("Intimidation").value = a4;
+this.getField("Persuasion").value = a5;
+this.getField("Religion").value = a6;
+this.getField("ConSave").checkThisBox(0,true);
+this.getField("ChaSave").checkThisBox(0,true);
+this.getField("HitDie").value = "d6";
+this.getField("SpellCHA").checkThisBox(0,true);
+this.getField("SpellStat").value = "CHA";
+this.getField("Level1SpellSlots").value = 3;
+    break;
+
+case "Warlock":
+this.getField("Arcana").value = a1;
+this.getField("Deception").value = a2;
+this.getField("History").value = a3;
+this.getField("Intimidation").value = a4;
+this.getField("Investigation").value = a5;
+this.getField("Nature").value = a6;
+this.getField("Religion").value = a7;
+this.getField("ChaSave").checkThisBox(0,true);
+this.getField("WisSave").checkThisBox(0,true);
+this.getField("HitDie").value = "d8";
+this.getField("SpellCHA").checkThisBox(0,true);
+this.getField("SpellStat").value = "CHA";
+this.getField("Level1SpellSlots").value = 2;
+    break;
+
+case "Wizard":
+this.getField("Arcana").value = a1;
+this.getField("History").value = a2;
+this.getField("Insight").value = a3;
+this.getField("Investigation").value = a4;
+this.getField("Medicine").value = a5;
+this.getField("Religion").value = a6;
+this.getField("IntSave").checkThisBox(0,true);
+this.getField("WisSave").checkThisBox(0,true);
+this.getField("HitDie").value = "d6";
+this.getField("SpellINT").checkThisBox(0,true);
+this.getField("SpellStat").value = "INT";
+this.getField("Level1SpellSlots").value = 3;
+    break;
+
+}
+
+switch(this.getField("Race").value)  {
+  case "Elf":
+    this.getField("Perception").checkThisBox(0,true);
+    break;
+  case "Tabaxi":
+    this.getField("Perception").checkThisBox(0,true);
+    this.getField("Stealth").checkThisBox(0,true);
+    break;
+}
+
+tBack = this.getField("Background").value;
+switch(tBack) {
+
+  case "Acolyte":
+    this.getField("Insight").checkThisBox(0,true);
+    this.getField("Religion").checkThisBox(0,true);
+  break;
+
+  case "Sage":
+  this.getField("Arcana").checkThisBox(0,true);
+  this.getField("History").checkThisBox(0,true);
+  break;
+
+  case "Charlatan":
+  this.getField("SleightofHand").checkThisBox(0,true);
+  this.getField("Deception").checkThisBox(0,true);
+  break;
+
+  case "Criminal":
+  this.getField("Stealth").checkThisBox(0,true);
+  this.getField("Deception").checkThisBox(0,true);
+  break;
+
+  case "Entertainer":
+  this.getField("Acrobatics").checkThisBox(0,true);
+  this.getField("Performance").checkThisBox(0,true);
+  break;
+
+  case "FolkHero":
+  this.getField("AnimalHandling").checkThisBox(0,true);
+  this.getField("Survival").checkThisBox(0,true);
+  break;
+
+  case "GuildArtisan":
+  this.getField("Insight").checkThisBox(0,true);
+  this.getField("Persuasion").checkThisBox(0,true);
+  break;
+
+  case "Hermit":
+  this.getField("Medicine").checkThisBox(0,true);
+  this.getField("Religion").checkThisBox(0,true);
+  break;
+
+  case "Noble":
+  this.getField("History").checkThisBox(0,true);
+  this.getField("Persuasion").checkThisBox(0,true);
+  break;
+
+  case "Outlander":
+  this.getField("Athletics").checkThisBox(0,true);
+  this.getField("Survival").checkThisBox(0,true);
+  break;
+
+  case "Sailor":
+  this.getField("Athletics").checkThisBox(0,true);
+  this.getField("Perception").checkThisBox(0,true);
+  break;
+
+  case "Soldier":
+  this.getField("Intimidation").checkThisBox(0,true);
+  this.getField("Athletics").checkThisBox(0,true);
+  break;
+
+  case "Urchin":
+  this.getField("SleightofHand").checkThisBox(0,true);
+  this.getField("Stealth").checkThisBox(0,true);
+  break;
+
+}
